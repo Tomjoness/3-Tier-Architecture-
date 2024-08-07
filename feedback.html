@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Twin Cities</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div class="navbar">
+      <a href="main.html">Home</a>
+      <div class="dropdown">
+        <button class="dropbtn">Birmingham</button>
+        <div class="dropdown-content">
+          <a href="map q.php">Map</a>
+          <a href="wea.php">Weather</a>
+          <a href="B_flicker.php">Images</a>
+        </div>
+      </div>
+      <div class="dropdown">
+        <button class="dropbtn">Chicago</button>
+        <div class="dropdown-content">
+          <a href="map w.php">Map</a>
+          <a href="wea1.php">Weather</a>
+          <a href="C_flicker.php">Images</a>
+        </div>
+      </div>
+      <a href="feedback.html">Feedback</a>
+    </div>
+      </div>
+    </div>
+  </body>
+</html>
+<html>
+<head>
+  <title>Comments Widget</title>
+  <style>
+    #comments {
+      border: 1px solid #ccc;
+      padding: 10px;
+      margin-bottom: 20px;
+    }
+
+    #comment-form {
+      margin-bottom: 10px;
+    }
+
+    #comment-form label {
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    #comment-form input,
+    #comment-form textarea {
+      display: block;
+      margin-bottom: 10px;
+      width: 100%;
+    }
+
+    #comment-form input[type="submit"] {
+      background-color: #4CAF50;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    #comment-form input[type="submit"]:hover {
+      background-color: #45a049;
+    }
+
+    #comment-list {
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div id="comments">
+    <h2>Comments</h2>
+    <form id="comment-form">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name"><br>
+      <label for="comment">Comment:</label>
+      <textarea id="comment" name="comment"></textarea><br>
+      <input type="submit" value="Submit">
+    </form>
+    <div id="comment-list">
+      <!-- Previous comments will be added here -->
+    </div>
+  </div>
+
+  <script>
+    // Get the comment form and comment list elements
+    const form = document.getElementById("comment-form");
+    const commentList = document.getElementById("comment-list");
+
+    // Add a submit event listener to the form
+    form.addEventListener("submit", function(event) {
+      // Prevent the form from submitting and refreshing the page
+      event.preventDefault();
+
+      // Get the name and comment input values
+      const name = document.getElementById("name").value;
+      const comment = document.getElementById("comment").value;
+
+      // Create a new comment element with the name and comment
+      const newComment = document.createElement("div");
+      newComment.innerHTML = `<strong>${name}</strong>: ${comment}`;
+
+      // Add the new comment to the comment list
+      commentList.appendChild(newComment);
+
+      // Reset the form inputs
+      form.reset();
+    });
+  </script>
+</body>
+</html>

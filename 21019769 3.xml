@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<submission_xml xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    xsi:noNamespaceSchemaLocation="submission_schema.xsd">
+    <!-- 
+    This file is an example of a valid individual submission file. 
+    Note the schema file (XSD) pointed to on line 2/3 - TREAT THE SCHEMA AS READ ONLY
+    Use this example file as a template and fill with your own data 
+    validating as you go along using Oxygen or some other schema aware editor;
+	an on-line tool is here: https://www.liquid-technologies.com/online-xsd-validator
+    
+    DO NOT CHANGE ANY TAGS OR THEIR ORDER BUT ONLY THE CONTENT, OTHERWISE VALIDATION WILL FAIL
+    Keep the schema in the same directory as the document as that's where oXygen expects it.
+    -->    
+    <group id="B-03"/>
+    <student id="21019768"/>
+    <!--- Describe one or more group tasks that you contributed to -->
+    <group_contribution>
+		As a group I created firstly the database individually using mysql.
+        This was ok as created last year manually and done same again this year.
+        Was more complicated compared to forward using excel forward but entered all data using mysql
+        Secondly completed weather api fetching weather from application and then displaying
+     </group_contribution>
+    <!--- Describe your individual component -->
+    <individual_component type="Build and integrate a photo widget">
+        <description> Using the Flickr API, I pulled images that contained city name, and  that contain 'specfic place of interest ' in the body of the post. 
+
+        For example search term of birmingham bullring would present pictures of birmingham bullring
+        A problem potentially with this is some pictures are set to private so api can not display. The api is interactive with use of slideshow format with naviagation options.
+        allowing user to click on button to go forward to a picture or back to a previous with coding being used through term user could easily change qnd can be formated for specific purpose.
+        The api also uses cache function at start of code meaning any previously displayed images will appear first . 25 images are displayed for each slideshow which can be changed for user.
+        A short description for each picture coming from flickr appears on the page letting user to understand what the picture is. The slideshow also works without human involement  and speed can be adjusted for needs.
+        The api is secure and has easy to use access Flickr data allowing user to gain access for photos there is also an option to change size of image displayed
+        </description>
+        <problems>A problem I had while creating this was understanding how to link prokect into main design of the project. Due to limited experience with coding I felt this was difucult
+        as well as this I tried to make flickr api more intreractive. While making api more interactive I was required to use a wide range of resources. 
+        while using the api key and trying to link to a config file there was a few problems for example application stop working and display being affected. 
+        
+        </problems>
+        <solutions>After research and using range of resoucres including w3schools I was able to break project down into specific goals and targets
+        As well as gaining understanding of how to deliver a fully working flickr api which was able to interactive and fully userable within the whole websiste application.
+        The solution to this problem was by researching how config files work and keeping conistant through using PHP varible to open the file get the key then import within the search function.
+
+        </solutions>
+        <hours_effort>6</hours_effort>
+        <technologies>
+            <tech>php</tech>
+            <tech>javascript</tech>
+            <tech>html5</tech>
+            <tech>css</tech>
+        </technologies>
+        <source_files>
+            <file>
+                <name>flickr.php</name>
+                <purpose>to fetch flickr photos</purpose>
+            </file>
+            <file>
+                <name>index.html</name>
+                <purpose>main page with embedded photos</purpose>
+            </file>
+        </source_files>
+    </individual_component>
+    <security_discussion>Confidentiality: As a group, we have not implemented any login function for the application, therefore, we do not collect any confidential information from users such as their name, email or password. 
+    The data we use for the application is collected from external sources such as Google, OpenWeatherMap, and Flickr. We ensure that we do not breach any privacy agreements by adhering to the terms and conditions of the APIs we use. 
+    For instance, for the Flickr photo widget, we only pull photos that have been set to “everyone”. This way, only the photos of users who are comfortable sharing their photos will be shown.
+
+Integrity: We ensure the data we collect is displayed correctly without any manipulation. For instance, for the weather widget, we display the correct temperature and weather description without modifying the values. 
+Similarly, for the map widget, we display the true map from Google Maps with additional markers added to places of interest while maintaining the positions. 
+For the Flickr photos, when the user clicks on a photo, a description appears, which links to the city, enabling the user to understand what the photo means. 
+We have not manipulated the content of the data being pulled from the APIs, but we have only changed how it is visually displayed.
+
+Availability: Since we rely heavily on external services to provide content for the website, any temporary unavailability or problems with these services can cause parts of the website to be unavailable. 
+The maintenance of these services is external to us, and we cannot control it. Therefore, if any of these services become unavailable, we will have to wait for the providers to fix the issue before the application can work again. 
+Additionally, the database relies on the user's machine servers being operational, which can be a reliability issue.
+
+Utility: As a group, we have kept various elements within the website consistent to make it easy for users to interpret the data.
+ For instance, we display all temperatures in the same units (degrees Celsius) for consistency and easy understanding. 
+ We ensure the information in the database is stored in a format that is easy to understand and clear to everyone. 
+ We have also ensured that the data is consistently stored in the same format across the database. 
+ The use of API keys generated by the API providers may cause an issue if the key needs to be updated, and the person who holds the key is not available.
+  Therefore, it is essential to ensure the keys are managed and updated regularly to avoid disruptions.
+    </security_discussion>
+    <individual_comment>his task was relatively easy to do mainly because I had previously completed
+simple activiries within workshops  I was therefore able to use this  code and knowledge. The Flickr API website was also really useful and I used the documentation to help. 
+As well as this I used range of online tools including w3schools and youtube and linkedin learning resoucres and used a trial and error method throughout the project.
+   Using resoucres allowed me to understand what  I needed to do to pull posts searching for city under city name.
+    </individual_comment>
+</submission_xml>
+<!-- DSA Individual XML File Example, 2022-3 -->
+<!-- author: prakash.chatterjee@uwe.ac.uk -->
